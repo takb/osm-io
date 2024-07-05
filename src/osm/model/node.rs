@@ -73,4 +73,8 @@ impl Node {
     pub fn take_tags(&mut self) -> Vec<Tag> {
         std::mem::take(&mut self.tags)
     }
+
+    pub fn tags_mut(&mut self) -> &mut Vec<Tag> {
+        &mut self.tags
+    }
 }
