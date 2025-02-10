@@ -65,6 +65,10 @@ impl Way {
         &self.refs
     }
 
+    pub fn refs_mut(&mut self) -> &mut Vec<i64> {
+        &mut self.refs
+    }
+
     pub fn tags(&self) -> &Vec<Tag> {
         &self.tags
     }
