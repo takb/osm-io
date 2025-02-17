@@ -105,7 +105,7 @@ impl FileBlock {
     fn zlib_encode(buf: Vec<u8>, compression_level: Compression) -> Result<Vec<u8>, anyhow::Error> {
         let mut encoder = ZlibEncoder::new(Vec::new(), compression_level);
         encoder.write_all(buf.as_slice())?;
-        encoder.flush()?;
+        // encoder.flush()?;
         let encoded = encoder.finish()?;
         Ok(encoded)
     }
